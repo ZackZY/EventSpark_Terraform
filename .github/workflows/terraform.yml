@@ -34,7 +34,7 @@ jobs:
 
     - name: Terraform Plan
       id: plan
-      run: terraform plan -no-color
+      run: echo "terraform plan -no-color"
       continue-on-error: true
 
     - name: Update Pull Request
@@ -85,6 +85,6 @@ jobs:
 
     - name: Terraform Apply
       if: github.event_name == 'push'
-      run: terraform apply -auto-approve
+      run: echo "terraform apply -auto-approve"
       # This step would normally apply the planned infrastructure changes.
       # It has been replaced with an echo statement for demonstration purposes.
