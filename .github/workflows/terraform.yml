@@ -34,7 +34,7 @@ jobs:
 
     - name: Terraform Plan
       id: plan
-      run: echo "terraform plan -no-color"
+      run: terraform plan -no-color
       continue-on-error: true
 
     - name: Update Pull Request
