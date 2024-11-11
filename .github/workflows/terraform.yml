@@ -85,8 +85,5 @@ jobs:
 
     - name: Terraform Apply
       if: github.event_name == 'push'
-      run: |
-        sleep 65
-        echo "terraform apply -auto-approve"
-      # This step would normally apply the planned infrastructure changes.
-      # It has been replaced with an echo statement for demonstration purposes.
+      continue-on-error: true
+      run: terraform apply -auto-approve
